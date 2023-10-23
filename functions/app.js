@@ -20,20 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarPregunta(pregunta) {
-        const preguntaDiv = document.getElementById('pregunta');
-        preguntaDiv.textContent = pregunta.pregunta;
+        const preguntaSection = document.getElementById('pregunta');
+        preguntaSection.textContent = pregunta.pregunta;
 
-        const opcionesDiv = document.getElementById('opciones');
-        opcionesDiv.innerHTML = ""; // Limpiar opciones anteriores
+        const opcionesSection = document.getElementById('opciones');
+        opcionesSection.innerHTML = ""; // Limpiar opciones anteriores
 
         pregunta.opciones.forEach((opcion, index) => {
-            const opcionDiv = document.createElement('div');
-            opcionDiv.className = 'opcion';
-            opcionDiv.textContent = `${String.fromCharCode(97 + index)}) ${opcion}`;
-            opcionDiv.addEventListener('click', function() {
+            const opcionSection = document.createElement('Section');
+            opcionSection.className = 'opcion';
+            opcionSection.textContent = `${String.fromCharCode(97 + index)}) ${opcion}`;
+            opcionSection.addEventListener('click', function() {
                 manejarClic(opcion);
             });
-            opcionesDiv.appendChild(opcionDiv);
+            opcionesSection.appendChild(opcionSection);
         });
     }
 
@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mostrarResultado() {
-        const preguntaDiv = document.getElementById('pregunta');
-        preguntaDiv.textContent = '¡Quiz completado!';
+        const preguntaSection = document.getElementById('pregunta');
+        preguntaSection.textContent = '¡Quiz completado!';
 
-        const opcionesDiv = document.getElementById('opciones');
-        opcionesDiv.innerHTML = ""; // Limpiar opciones
+        const opcionesSection = document.getElementById('opciones');
+        opcionesSection.innerHTML = ""; // Limpiar opciones
 
-        const resultadoDiv = document.getElementById('resultado');
-        resultadoDiv.textContent = `Puntos: ${puntos}`;
+        const resultadoSection = document.getElementById('resultado');
+        resultadoSection.textContent = `Puntos: ${puntos}`;
     }
 
     // Iniciar el quiz
