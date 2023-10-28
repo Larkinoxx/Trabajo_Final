@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .opcion {
+    cursor: pointer;
+    width: 45%;
+  }
+  
+  .opcion:hover {
+    color: blue
+  }
+  
+ #quizP {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Pregunta */
+  #pregunta {
+    flex-shrink: 0;
+    flex-basis: 1%;
+    /* Ajustar este valor dependiendo del espacio requerido */
+    margin-bottom: 10px;
+    /* Ajustar este valor dependiendo del espacio requerido */
+    text-align: center;
+    /* Centrar la pregunta */
+    width: 100%;
+    font-size: 24px;
+  }
+  
+  /* Opciones */
+  #opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    margin-top: -5%;
+  }
+
+  section {
+    border-style: double;
+  }
